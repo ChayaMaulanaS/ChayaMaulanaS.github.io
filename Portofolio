@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Chaya Maulana.S</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Animasi fade-in untuk section */
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      background: #fff;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      animation: fadeInText 1.5s ease forwards;
+    }
+
+    header p {
+      font-size: 1.1em;
+      animation: fadeInText 2s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    section h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: #fff;
+      animation: fadeInText 2.5s ease forwards;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chaya Maulana.S</h1>
+  <p>Lulusan Pendidikan Teknik Informatika - Universitas Negeri Padang</p>
+</header>
+
+<section>
+  <h2>👨‍💻 Tentang Saya</h2>
+  <p>
+    Saya merupakan lulusan Universitas Negeri Padang...
+  </p>
+</section>
+
+<section>
+  <h2>🛠️ Skill</h2>
+  <!-- isi skill -->
+</section>
+
+<section>
+  <h2>📂 Portofolio</h2>
+  <!-- isi portofolio -->
+</section>
+
+<section>
+  <h2>💼 Pengalaman</h2>
+</section>
+
+<section>
+  <h2>📜 Sertifikat</h2>
+</section>
+
+<section>
+  <h2>📬 Kontak</h2>
+</section>
+
+<footer>
+  <p>© 2025 Chaya Maulana.S</p>
+</footer>
+
+<script>
+  // Animasi fade-in saat scroll
+  const sections = document.querySelectorAll('section');
+  const revealSection = () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if(top < windowHeight - 100){
+        sec.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealSection);
+  window.addEventListener('load', revealSection);
+</script>
+
+</body>
+</html>
