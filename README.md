@@ -1,2 +1,2 @@
 # ChayaMaulanaS.github.io
-Repository ini berisi portofolio project saya sebagai lulusan Pendidikan Teknik Informatika.
+Repository ini berisikan tentang portofolio saya sebagai lulusan Pendidikan Teknik Informatika.
