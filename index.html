@@ -12,20 +12,10 @@
       line-height: 1.6;
       background: #f9f9f9;
       color: #333;
+      overflow-x: hidden;
     }
-    header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.1em;
-    }
+
+    /* Animasi fade-in untuk section */
     section {
       max-width: 900px;
       margin: auto;
@@ -34,28 +24,73 @@
       margin-bottom: 20px;
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
     }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      animation: fadeInText 1.5s ease forwards;
+    }
+
+    header p {
+      font-size: 1.1em;
+      animation: fadeInText 2s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     section h2 {
       color: #2c3e50;
       border-bottom: 2px solid #eee;
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     a {
       color: #2980b9;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
+
     a:hover {
       text-decoration: underline;
+      transform: scale(1.05);
     }
+
     footer {
       text-align: center;
       padding: 20px;
       background: #2c3e50;
       color: #fff;
+      animation: fadeInText 2.5s ease forwards;
     }
   </style>
 </head>
@@ -72,8 +107,15 @@
     Saya merupakan lulusan Universitas Negeri Padang, Program Studi Pendidikan Teknik Informatika. 
     Selama perkuliahan, saya menjalani magang di PT. Aka Solusi Teknologi dan melaksanakan Praktik Lapangan Kesekolahan di SMK Negeri 6 Padang. 
     Saya memiliki ketertarikan yang besar di bidang IT, khususnya pada desain grafis. 
-    Saya juga memiliki minat mendalam dalam pengembangan game, dan telah mengerjakan dua proyek game selama masa studi. 
-    Di luar bidang akademik, saya memiliki bakat dalam bermain gitar sejak SMP dan pernah mewakili Kabupaten Tanah Datar dalam ajang Festival Lomba Seni Siswa Nasional (FLS2N) tahun 2018 pada bidang gitar.
+    Saat magang, saya terlibat dalam pembuatan berbagai desain pamflet, termasuk dua di antaranya yang digunakan dalam event Job Fair di SMK Negeri 6 Padang.
+
+    Saya juga memiliki minat mendalam dalam pengembangan game, dan telah mengerjakan dua proyek game selama masa studi.
+    Pada semester 5, saya mengembangkan sebuah game Visual Novel sebagai tugas akhir mata kuliah dan berhasil meraih nilai A. 
+    Selanjutnya, saya memilih Game Based Learning sebagai fokus tugas akhir perkuliahan dengan membuat game edukatif ber-genre Role Playing Game (RPG) untuk siswa kelas X di SMK Negeri 6 Padang, 
+    dan kembali meraih nilai A untuk proyek tersebut.
+
+    Di luar bidang akademik, saya memiliki bakat dalam bermain gitar sejak SMP dan saat duduk di kelas 2 SMA, 
+    saya dipercaya mewakili Kabupaten Tanah Datar dalam ajang Festival Lomba Seni Siswa Nasional (FLS2N) tahun 2018 pada bidang gitar.
   </p>
 </section>
 
@@ -118,22 +160,22 @@
   <h2>📂 Portofolio</h2>
   <h3>1) Game Based Learning - RPG</h3>
   <p>
-    Game ini dikembangkan sebagai media pembelajaran interaktif untuk siswa kelas X SMK Negeri 6 Padang. 
-    Siswa diajak menyelesaikan misi, berdialog dengan NPC pembawa materi, dan menjawab soal edukatif.
+    Game ini dikembangkan sebagai media pembelajaran interaktif berbasis game (Game Based Learning) untuk siswa kelas X SMK Negeri 6 Padang, khususnya dalam mata pelajaran Informatika. 
+    Siswa diajak untuk menyelesaikan misi, berdialog dengan NPC pembawa materi, dan menjawab soal-soal edukatif di dalam dungeon.
   </p>
   <a href="https://drive.google.com/file/d/12S6XrIzqqJgJqOfIenPPEEK0iDsFB-Br/view?usp=sharing" target="_blank">🔗 Lihat Project</a>
 
   <h3>2) Cermin Rembulan - Game Visual Novel</h3>
   <p>
-    Game Visual Novel yang dikembangkan sebagai proyek akhir semester 5 di UNP. 
-    Mengangkat tema naratif dengan visual menarik serta pilihan interaktif yang memengaruhi jalannya cerita.
+    "Cermin Rembulan" adalah sebuah game Visual Novel yang dikembangkan sebagai proyek akhir mata kuliah pada semester 5 di Program Studi Pendidikan Teknik Informatika, Universitas Negeri Padang. 
+    Game ini mengangkat tema naratif yang mendalam dengan balutan visual dan alur cerita yang menarik, serta pilihan interaktif yang memengaruhi jalannya cerita.
   </p>
   <a href="https://drive.google.com/file/d/162u-ev41bvwH106T5HGoMqtwkw4CZUk0/view?usp=sharing" target="_blank">🔗 Lihat Project</a>
 
   <h3>3) Desain Grafis</h3>
   <p>
-    Selama Praktik Lapangan di SMK Negeri 6 Padang, saya membuat desain pamflet Job Fair yang dijadikan spanduk utama sekolah. 
-    Selain itu, saat magang di PT. Aka Solusi Teknologi saya juga membuat berbagai materi desain seperti pamflet kegiatan dan konten media sosial.
+    Selama Praktik Lapangan Kesekolahan di SMK Negeri 6 Padang, saya dipercaya untuk membuat desain pamflet acara Job Fair yang kemudian dijadikan spanduk utama dan dipasang di gerbang sekolah. 
+    Selain itu, saat magang di PT. Aka Solusi Teknologi, saya juga diberi tugas membuat berbagai materi desain seperti pamflet kegiatan dan konten media sosial sesuai arahan dari pembimbing lapangan.
   </p>
   <a href="https://drive.google.com/drive/folders/1uD6zX6U5pWAus7Q5iearE_kUrJrkr5b8?usp=drive_link" target="_blank">🔗 Lihat Desain</a>
 </section>
@@ -164,6 +206,23 @@
 <footer>
   <p>© 2025 Chaya Maulana.S</p>
 </footer>
+
+<script>
+  // Animasi fade-in saat scroll
+  const sections = document.querySelectorAll('section');
+  const revealSection = () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if(top < windowHeight - 100){
+        sec.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealSection);
+  window.addEventListener('load', revealSection);
+</script>
 
 </body>
 </html>
